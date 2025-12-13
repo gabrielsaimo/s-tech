@@ -12,7 +12,7 @@ export function Blog() {
       className="relative py-28 lg:py-36 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-white dark:bg-[#030712]" />
+      <div className="absolute inset-0 bg-white/90 dark:bg-[#030712]/90" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">

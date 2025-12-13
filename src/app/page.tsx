@@ -14,8 +14,23 @@ export default function Home() {
   return (
     <>
       <AnimatedBackground />
+      {/* Fixed Watermark Logo - follows scroll */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-[5] flex items-center justify-center"
+        aria-hidden="true"
+      >
+        <div 
+          className="w-[600px] h-[600px] opacity-[0.04] dark:opacity-[0.03]"
+          style={{
+            backgroundImage: 'url(/logo-s.png)',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
+        />
+      </div>
       <Header />
-      <main className="relative z-10">
+      <main className="relative z-[2]">
         <Hero />
         <About />
         <Services />

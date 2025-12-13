@@ -74,14 +74,22 @@ export function Header() {
               e.preventDefault();
               handleNavClick("#hero");
             }}
-            className="flex items-center gap-2.5"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="flex items-center gap-2.5 group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <div className="w-9 h-9 rounded-xl bg-gray-900 dark:bg-white flex items-center justify-center">
-              <span className="text-white dark:text-gray-900 font-bold text-lg">S</span>
-            </div>
-            <span className="text-xl font-semibold text-gray-900 dark:text-white tracking-tight">
+            <motion.div 
+              className="relative w-10 h-10 rounded-xl overflow-hidden"
+              whileHover={{ rotate: [0, -5, 5, 0] }}
+              transition={{ duration: 0.5 }}
+            >
+              <img 
+                src="/logo-s.png" 
+                alt="S-tech Logo" 
+                className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
+              />
+            </motion.div>
+            <span className="text-xl font-semibold text-gray-900 dark:text-white tracking-tight transition-colors duration-300 group-hover:text-primary-600 dark:group-hover:text-primary-400">
               S-tech
             </span>
           </motion.a>

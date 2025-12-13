@@ -17,7 +17,7 @@ export function AboutBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-white dark:bg-[#030712]" />
+      <div className="absolute inset-0 bg-white/90 dark:bg-[#030712]/90" />
       
       {/* Gradient orb */}
       <div
@@ -55,7 +55,7 @@ export function ServicesBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-gray-50 dark:bg-[#0a0a0f]" />
+      <div className="absolute inset-0 bg-gray-50/90 dark:bg-[#0a0a0f]/90" />
 
       {/* Static wave */}
       <svg
@@ -105,7 +105,7 @@ export function PortfolioBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-gray-50 dark:bg-[#0a0a0f]" />
+      <div className="absolute inset-0 bg-gray-50/90 dark:bg-[#0a0a0f]/90" />
 
       {/* Gradient mesh */}
       <div
@@ -158,7 +158,7 @@ export function TechnologiesBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-white dark:bg-[#030712]" />
+      <div className="absolute inset-0 bg-white/90 dark:bg-[#030712]/90" />
 
       {/* Circuit pattern - pure CSS */}
       <div
@@ -208,7 +208,7 @@ export function ContactBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-gray-50 dark:bg-[#0a0a0f]" />
+      <div className="absolute inset-0 bg-gray-50/90 dark:bg-[#0a0a0f]/90" />
 
       {/* Central glow */}
       <div
