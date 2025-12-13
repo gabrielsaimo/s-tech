@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, QrCode } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PortfolioBackground } from "@/components/ui/SectionBackgrounds";
@@ -90,6 +90,57 @@ const projects = [
     featured: true,
     url: "https://lgpdprodaub.uberlandia.mg.gov.br",
     icon: Shield,
+  },
+  {
+    id: "central-ambulancia",
+    title: "Central de Ambulâncias",
+    category: "Portal Governamental",
+    description:
+      "Sistema de gestão e solicitação de ambulâncias para a Prefeitura de Uberlândia. Plataforma que otimiza o atendimento de emergências e gerenciamento de frotas.",
+    results: [
+      { label: "Atendimentos/mês", value: "1k+" },
+      { label: "Tempo resposta", value: "-40%" },
+      { label: "Cobertura", value: "100%" },
+    ],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+    color: "from-red-500 to-rose-600",
+    featured: false,
+    url: "https://centralambulancia.uberlandia.mg.gov.br/principal",
+    icon: Ambulance,
+  },
+  {
+    id: "segunda-via",
+    title: "Segunda Via de Documentos",
+    category: "Portal Governamental",
+    description:
+      "Portal de emissão de segunda via de documentos para cidadãos de Uberlândia. Sistema simplificado para consulta e solicitação de documentos municipais.",
+    results: [
+      { label: "Consultas/mês", value: "5k+" },
+      { label: "Satisfação", value: "95%" },
+      { label: "Disponibilidade", value: "24/7" },
+    ],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+    color: "from-sky-500 to-blue-600",
+    featured: false,
+    url: "https://segundavia.uberlandia.mg.gov.br/consulta",
+    icon: FileText,
+  },
+  {
+    id: "pix-web",
+    title: "PIX Web Uberlândia",
+    category: "Portal Governamental",
+    description:
+      "Plataforma de pagamentos via PIX para serviços municipais de Uberlândia. Sistema seguro e integrado para facilitar pagamentos dos cidadãos.",
+    results: [
+      { label: "Transações/mês", value: "10k+" },
+      { label: "Valor processado", value: "R$2M+" },
+      { label: "Uptime", value: "99.9%" },
+    ],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "API PIX"],
+    color: "from-teal-500 to-emerald-600",
+    featured: false,
+    url: "https://pix-web.uberlandia.mg.gov.br",
+    icon: QrCode,
   },
   {
     id: "menu-digital",
