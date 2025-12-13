@@ -9,10 +9,11 @@ import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Home() {
   return (
     <>
+      <SpeedInsights />
       <AnimatedBackground />
       {/* Fixed Watermark Logo - follows scroll */}
       <div 
