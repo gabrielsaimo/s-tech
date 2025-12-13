@@ -8,6 +8,22 @@ import { PortfolioBackground } from "@/components/ui/SectionBackgrounds";
 
 const projects = [
   {
+    id: "igreja-videira",
+    title: "Igreja Videira Uberlândia",
+    category: "Website Institucional",
+    description:
+      "Site institucional moderno para a Igreja Videira de Uberlândia. Design elegante com acessibilidade em Libras e integração com redes sociais.",
+    results: [
+      { label: "Acessos mensais", value: "5k+" },
+      { label: "Satisfação", value: "100%" },
+    ],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    color: "from-violet-500 to-purple-600",
+    featured: true,
+    url: "https://videira-uberlandia.com.br/",
+    icon: Church,
+  },
+  {
     id: "rematricula-nacionalnet",
     title: "Rematrícula NacionalNet",
     category: "Sistema Educacional",
@@ -37,7 +53,7 @@ const projects = [
     ],
     technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
     color: "from-emerald-500 to-teal-600",
-    featured: true,
+    featured: false,
     url: "https://gerencia.syskeeper.com.br",
     icon: Building2,
   },
@@ -74,22 +90,6 @@ const projects = [
     featured: true,
     url: "https://lgpdprodaub.uberlandia.mg.gov.br",
     icon: Shield,
-  },
-  {
-    id: "igreja-videira",
-    title: "Igreja Videira Uberlândia",
-    category: "Website Institucional",
-    description:
-      "Site institucional moderno para a Igreja Videira de Uberlândia. Design elegante com acessibilidade em Libras e integração com redes sociais.",
-    results: [
-      { label: "Acessos mensais", value: "5k+" },
-      { label: "Satisfação", value: "100%" },
-    ],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    color: "from-violet-500 to-purple-600",
-    featured: false,
-    url: "https://videira-uberlandia.com.br/",
-    icon: Church,
   },
   {
     id: "menu-digital",

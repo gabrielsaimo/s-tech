@@ -36,21 +36,22 @@ export function WhatsAppButton() {
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            className="absolute bottom-full right-0 mb-3 bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-800 p-4 w-64"
+            className="absolute bottom-full right-0 mb-3 bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-800 p-5"
+            style={{ width: '320px', maxWidth: 'calc(100vw - 5rem)' }}
           >
             <button
               onClick={() => {
                 setShowTooltip(false);
                 setHasInteracted(true);
               }}
-              className="absolute top-2 right-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="absolute top-3 right-3 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               <X className="w-4 h-4 text-gray-400" />
             </button>
-            <p className="text-sm font-medium text-gray-900 dark:text-white mb-1">
+            <p className="text-base font-semibold text-gray-900 dark:text-white mb-2 pr-6">
               Precisa de ajuda?
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
               Estamos online! Clique para conversar pelo WhatsApp.
             </p>
           </motion.div>

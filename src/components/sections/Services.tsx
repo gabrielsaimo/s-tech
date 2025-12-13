@@ -114,7 +114,7 @@ export function Services() {
                 
                 <div className="grid lg:grid-cols-2 relative">
                   {/* Content */}
-                  <div className="p-12 lg:p-16">
+                  <div className="p-6 md:p-12 lg:p-16">
                     {/* Number with animation */}
                     <motion.div 
                       className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 font-mono text-sm font-semibold mb-8 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-all duration-300"
@@ -133,16 +133,16 @@ export function Services() {
                     </p>
 
                     {/* Features Grid */}
-                    <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                    <div className="grid sm:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-10">
                       {service.features.map((feature) => (
                         <div
                           key={feature}
-                          className="flex items-start gap-3"
+                          className="flex items-start gap-2 md:gap-3"
                         >
                           <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                           </div>
-                          <span className="text-sm text-gray-600 dark:text-gray-300">
+                          <span className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
                             {feature}
                           </span>
                         </div>
@@ -152,7 +152,7 @@ export function Services() {
                     {/* CTA */}
                     <motion.button
                       onClick={() => handleContactClick(service.title)}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                      className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >

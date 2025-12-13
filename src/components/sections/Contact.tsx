@@ -41,7 +41,7 @@ export function Contact() {
       <ContactBackground />
 
       <Container className="relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24">
           {/* Left - Content */}
           <div>
             <ScrollReveal>
@@ -72,21 +72,21 @@ export function Contact() {
                   onClick={() => handleWhatsAppClick()}
                   whileHover={{ x: 8, scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
-                  className="w-full flex items-center gap-6 p-8 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-200 dark:border-emerald-800 text-left hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-lg transition-all"
+                  className="w-full flex items-center gap-4 md:gap-6 p-5 md:p-8 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 border-2 border-emerald-200 dark:border-emerald-800 text-left hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-lg transition-all"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/30">
-                    <MessageCircle className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-emerald-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/30">
+                    <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                         WhatsApp
                       </h3>
                       <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300">
                         Recomendado
                       </span>
                     </div>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-sm md:text-base text-gray-500 dark:text-gray-400">
                       (11) 98953-9505 · Resposta rápida
                     </p>
                   </div>
@@ -99,7 +99,7 @@ export function Contact() {
                 <motion.a
                   href="mailto:contato@s-tech.com.br"
                   whileHover={{ x: 8 }}
-                  className="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all shadow-sm"
+                  className="flex items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all shadow-sm"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-gray-500 dark:text-gray-400" />
@@ -118,19 +118,19 @@ export function Contact() {
 
               {/* Info Cards */}
               <ScrollReveal delay={0.5}>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center gap-4 p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-                    <Clock className="w-5 h-5 text-gray-400" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">Horário</p>
-                      <p className="text-xs text-gray-500">Seg-Sex · 9h-18h</p>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  <div className="flex items-center gap-3 md:gap-4 p-4 md:p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+                    <Clock className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="text-xs md:text-sm font-medium text-gray-900 dark:text-white">Horário</p>
+                      <p className="text-[10px] md:text-xs text-gray-500">Seg-Sex · 9h-18h</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-                    <MapPin className="w-5 h-5 text-gray-400" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">Atendimento</p>
-                      <p className="text-xs text-gray-500">100% Remoto</p>
+                  <div className="flex items-center gap-3 md:gap-4 p-4 md:p-5 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+                    <MapPin className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="text-xs md:text-sm font-medium text-gray-900 dark:text-white">Atendimento</p>
+                      <p className="text-[10px] md:text-xs text-gray-500">100% Remoto</p>
                     </div>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export function Contact() {
 
           {/* Right - Quick Contact Card */}
           <ScrollReveal direction="right">
-            <div className="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 p-10 lg:p-12 shadow-sm">
+            <div className="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 md:p-10 lg:p-12 shadow-sm">
               <div className="text-center mb-10">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
                   <Phone className="w-10 h-10 text-white" />
@@ -154,8 +154,8 @@ export function Contact() {
               </div>
 
               {/* Quick Messages */}
-              <div className="space-y-3 mb-8">
-                <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">
+              <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                <p className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 md:mb-4">
                   Selecione o assunto (opcional):
                 </p>
                 {quickMessages.map((msg, index) => (
@@ -164,7 +164,7 @@ export function Contact() {
                     onClick={() => setSelectedMessage(msg)}
                     whileHover={{ x: 4 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full text-left px-5 py-4 rounded-xl border transition-all ${
+                    className={`w-full text-left px-4 md:px-5 py-3 md:py-4 rounded-xl border transition-all ${
                       selectedMessage === msg
                         ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300"
                         : "bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"

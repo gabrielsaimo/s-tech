@@ -75,6 +75,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 @media (min-width: 1920px) {
@@ -91,6 +93,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
 }
 
 /* Premium Typography */
@@ -107,6 +111,11 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 p {
   line-height: 1.8;
   color: var(--muted);
+}
+
+/* Prevent horizontal overflow */
+section, main, div {
+  max-width: 100%;
 }
 
 /* Elegant Scrollbar */
