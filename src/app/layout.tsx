@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { CookieConsent } from "@/components/ui/CookieConsent";
+import { ConsentAwareVercelAnalytics } from "@/components/providers/ConsentAwareVercelAnalytics";
+import { ConsentAwareTracking } from "@/components/providers/ConsentAwareTracking";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -68,7 +71,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning className="overflow-x-hidden">
       <body className={`${inter.variable} font-sans antialiased overflow-x-hidden`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <ConsentAwareVercelAnalytics />
+          <ConsentAwareTracking />
+          <CookieConsent />
+        </ThemeProvider>
       </body>
     </html>
   );

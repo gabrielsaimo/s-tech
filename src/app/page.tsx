@@ -8,12 +8,9 @@ import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
-import { CookieConsent } from "@/components/ui/CookieConsent";
-import { ConsentAwareVercelAnalytics } from "@/components/providers/ConsentAwareVercelAnalytics";
 export default function Home() {
   return (
     <>
-      <ConsentAwareVercelAnalytics />
       <AnimatedBackground />
       {/* Fixed Watermark Logo - follows scroll */}
       <div 
@@ -41,7 +38,6 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
-      <CookieConsent />
     </>
   );
 }
