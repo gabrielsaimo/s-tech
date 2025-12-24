@@ -8,7 +8,9 @@ import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 export default function Home() {
   return (
     <>
@@ -40,6 +42,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <CookieConsent />
     </>
   );
 }
