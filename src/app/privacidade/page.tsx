@@ -4,8 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade | S-tech",
-  description: "Política de Privacidade da S-tech. Saiba como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD.",
+  title: "Política de Privacidade | S-Tech Web",
+  description: "Política de Privacidade da S-Tech Web. Saiba como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD.",
 };
 
 export default function PrivacidadePage() {
@@ -23,7 +23,7 @@ export default function PrivacidadePage() {
                 <span className="text-white dark:text-gray-900 font-bold text-lg">S</span>
               </div>
               <span className="text-xl font-semibold text-gray-900 dark:text-white tracking-tight">
-                S-tech
+                S-Tech Web
               </span>
             </Link>
             <Link 
@@ -56,7 +56,7 @@ export default function PrivacidadePage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">1. Introdução</h2>
               <p className="mb-4">
-                A <strong className="text-gray-900 dark:text-white">S-tech</strong>, empresa especializada em desenvolvimento de sites e aplicativos para 
+                A <strong className="text-gray-900 dark:text-white">S-Tech Web</strong>, empresa especializada em desenvolvimento de sites e aplicativos para 
                 governos e igrejas, com sede no Brasil e atendimento 100% remoto em todo território nacional, 
                 está comprometida com a proteção da privacidade de seus usuários e clientes.
               </p>
@@ -105,7 +105,7 @@ export default function PrivacidadePage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">4. Compartilhamento de Dados</h2>
               <p className="mb-4">
-                A S-tech não vende, aluga ou compartilha suas informações pessoais com terceiros para fins 
+                A S-Tech Web não vende, aluga ou compartilha suas informações pessoais com terceiros para fins 
                 de marketing. Podemos compartilhar seus dados apenas nas seguintes situações:
               </p>
               <ul className="list-disc pl-6 space-y-2">
@@ -120,7 +120,7 @@ export default function PrivacidadePage() {
                 </li>
                 <li>
                   <strong className="text-gray-900 dark:text-white">Proteção de direitos:</strong> para proteger os direitos, propriedade ou 
-                  segurança da S-tech, nossos clientes ou terceiros.
+                  segurança da S-Tech Web, nossos clientes ou terceiros.
                 </li>
               </ul>
             </section>
@@ -202,7 +202,7 @@ export default function PrivacidadePage() {
               </p>
               <div className="p-6 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
                 <p className="mb-2">
-                  <strong className="text-gray-900 dark:text-white">S-tech</strong>
+                  <strong className="text-gray-900 dark:text-white">S-Tech Web</strong>
                 </p>
                 <p className="mb-2">
                   <strong className="text-gray-900 dark:text-white">Responsável:</strong> Saimo (Founder & CEO)
@@ -210,10 +210,10 @@ export default function PrivacidadePage() {
                 <p className="mb-2">
                   <strong className="text-gray-900 dark:text-white">E-mail:</strong>{" "}
                   <a 
-                    href="mailto:gabrielsaimo68@gmail.com" 
+                    href="mailto:contato@s-tech-web.com.br" 
                     className="text-blue-600 dark:text-blue-400 hover:underline"
                   >
-                    gabrielsaimo68@gmail.com
+                    contato@s-tech-web.com.br
                   </a>
                 </p>
                 <p className="mb-2">
@@ -242,7 +242,7 @@ export default function PrivacidadePage() {
         <Container className="py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} S-tech. Todos os direitos reservados.
+              © {new Date().getFullYear()} S-Tech Web. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link 

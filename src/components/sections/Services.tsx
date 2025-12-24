@@ -10,45 +10,59 @@ import { getWhatsAppLink } from "@/lib/utils";
 const services = [
   {
     id: "01",
-    title: "Sites Institucionais",
-    description: "Websites modernos e responsivos que transmitem a essência da sua organização. Design premium com foco em conversão e experiência do usuário.",
+    title: "Automação Comercial",
+    description: "Para lojas e empresas que precisam controlar estoque, vendas e faturamento. Elimine planilhas e tenha tudo em um só lugar, acessível de qualquer dispositivo.",
     features: [
-      "Design responsivo para todos dispositivos",
-      "Otimização SEO completa",
-      "Painel administrativo intuitivo",
-      "Carregamento ultrarrápido",
-      "Integração com redes sociais",
-      "Certificado SSL incluso",
+      "Controle de estoque em tempo real",
+      "Gestão de vendas e faturamento",
+      "Relatórios de desempenho",
+      "Integração com meios de pagamento",
+      "Alertas de estoque baixo",
+      "Acesso pelo celular ou computador",
+    ],
+    image: "system",
+  },
+  {
+    id: "02",
+    title: "Desenvolvimento White Label",
+    description: "Para agências de marketing e consultorias que precisam entregar projetos de tecnologia aos seus clientes. Você vende, nós desenvolvemos com a sua marca.",
+    features: [
+      "Projetos entregues na sua marca",
+      "Comunicação direta com sua equipe",
+      "Prazos garantidos em contrato",
+      "Código documentado e organizado",
+      "Suporte técnico incluso",
+      "Parceria de longo prazo",
     ],
     image: "web",
   },
   {
-    id: "02",
-    title: "Aplicativos Mobile",
-    description: "Apps nativos e híbridos que proporcionam uma experiência excepcional. Disponíveis para iOS e Android com design intuitivo.",
+    id: "03",
+    title: "Aplicativos Corporativos",
+    description: "Para empresas que precisam de ferramentas internas sob medida. Checklists, formulários, aprovações e processos que funcionam no celular da sua equipe.",
     features: [
-      "Apps para iOS e Android",
-      "Notificações push",
-      "Modo offline",
-      "Interface nativa",
-      "Atualizações Over-the-Air",
-      "Analytics integrado",
+      "Funciona em iOS e Android",
+      "Login seguro por colaborador",
+      "Funciona mesmo offline",
+      "Notificações automáticas",
+      "Relatórios para gestores",
+      "Integração com seus sistemas",
     ],
     image: "mobile",
   },
   {
-    id: "03",
-    title: "Sistemas Web",
-    description: "Sistemas personalizados para automatizar processos e aumentar a produtividade da sua organização. Dashboards e relatórios em tempo real.",
+    id: "04",
+    title: "Sites e Portais",
+    description: "Para empresas que precisam de presença digital profissional. Sites institucionais, portais de serviços e landing pages que geram resultados.",
     features: [
-      "Dashboard personalizado",
-      "Relatórios automatizados",
-      "Gestão de usuários",
-      "API REST moderna",
-      "Backup automático",
-      "Suporte técnico dedicado",
+      "Design moderno e profissional",
+      "Otimizado para aparecer no Google",
+      "Fácil de atualizar sem técnico",
+      "Carregamento ultrarrápido",
+      "Formulários que viram leads",
+      "Integração com WhatsApp",
     ],
-    image: "system",
+    image: "web",
   },
 ];
 
@@ -73,21 +87,21 @@ export function Services() {
         <div className="max-w-3xl mb-20">
           <ScrollReveal>
             <p className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-6">
-              Serviços
+              Soluções
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight leading-[1.1]">
-              Soluções completas para sua{" "}
-              <span className="text-gray-400 dark:text-gray-500">presença digital</span>
+              O que podemos fazer{" "}
+              <span className="text-gray-400 dark:text-gray-500">pelo seu negócio</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
-              Do conceito à implementação, oferecemos um conjunto completo de 
-              serviços para transformar sua visão em realidade.
+              Não vendemos tecnologia, vendemos resultados. Entenda seu desafio 
+              e nossa equipe criará a solução ideal para você.
             </p>
           </ScrollReveal>
         </div>
@@ -156,7 +170,7 @@ export function Services() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      Solicitar Orçamento
+                      Falar com Especialista
                       <ArrowUpRight className="w-4 h-4" />
                     </motion.button>
                   </div>

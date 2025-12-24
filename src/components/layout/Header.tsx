@@ -11,9 +11,8 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { label: "Início", href: "#hero" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Tecnologias", href: "#tecnologias" },
-  { label: "Portfólio", href: "#portfolio" },
+  { label: "Soluções", href: "#servicos" },
+  { label: "Cases", href: "#portfolio" },
   { label: "Blog", href: "#blog" },
   { label: "Contato", href: "#contato" },
 ];
@@ -85,12 +84,12 @@ export function Header() {
             >
               <img 
                 src="/logo-s.png" 
-                alt="S-tech Logo" 
+                alt="S-Tech Web Logo" 
                 className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
               />
             </motion.div>
             <span className="text-xl font-semibold text-gray-900 dark:text-white tracking-tight transition-colors duration-300 group-hover:text-primary-600 dark:group-hover:text-primary-400">
-              S-tech
+              S-Tech Web
             </span>
           </motion.a>
 

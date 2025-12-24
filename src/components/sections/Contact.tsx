@@ -9,6 +9,9 @@ import {
   ArrowUpRight,
   Phone,
   MapPin,
+  Send,
+  User,
+  Building2,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -17,19 +20,37 @@ import { getWhatsAppLink } from "@/lib/utils";
 
 const WHATSAPP_NUMBER = "5511989539505";
 
-const quickMessages = [
-  "Quero um orçamento para um site institucional",
-  "Preciso de um aplicativo mobile",
-  "Tenho interesse em um sistema web personalizado",
-  "Quero saber mais sobre os serviços",
-];
-
 export function Contact() {
-  const [selectedMessage, setSelectedMessage] = useState("");
+  const [formData, setFormData] = useState({
+    nome: "",
+    empresa: "",
+    whatsapp: "",
+    desafio: "",
+  });
 
-  const handleWhatsAppClick = (message?: string) => {
-    const finalMessage = message || selectedMessage || "Olá! Vim pelo site e gostaria de mais informações.";
-    window.open(getWhatsAppLink(WHATSAPP_NUMBER, finalMessage), "_blank");
+  const handleWhatsAppClick = (customMessage?: string) => {
+    const message = customMessage || "Olá, vi o site da S-Tech Web e gostaria de um orçamento.";
+    window.open(getWhatsAppLink(WHATSAPP_NUMBER, message), "_blank");
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = `Olá! Vim pelo site da S-Tech Web.
+
+*Nome:* ${formData.nome}
+*Empresa:* ${formData.empresa}
+*WhatsApp:* ${formData.whatsapp}
+
+*Desafio:* ${formData.desafio}`;
+
+    handleWhatsAppClick(message);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
   };
 
   return (
@@ -52,15 +73,15 @@ export function Contact() {
 
             <ScrollReveal delay={0.1}>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight leading-[1.1]">
-                Vamos criar algo{" "}
-                <span className="text-gray-400 dark:text-gray-500">incrível juntos</span>
+                Vamos resolver seu{" "}
+                <span className="text-gray-400 dark:text-gray-500">desafio juntos</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-12">
-                Entre em contato pelo WhatsApp e receba um atendimento 
-                personalizado. Responderemos em até 2 horas!
+                Entre em contato pelo WhatsApp ou preencha o formulário. 
+                Nossa equipe responde em até 2 horas!
               </p>
             </ScrollReveal>
 
@@ -97,7 +118,7 @@ export function Contact() {
               {/* Email */}
               <ScrollReveal delay={0.4}>
                 <motion.a
-                  href="mailto:contato@s-tech.com.br"
+                  href="mailto:contato@s-tech-web.com.br"
                   whileHover={{ x: 8 }}
                   className="flex items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all shadow-sm"
                 >
@@ -109,7 +130,7 @@ export function Contact() {
                       E-mail
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      contato@s-tech.com.br
+                      contato@s-tech-web.com.br
                     </p>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-gray-400" />
@@ -138,56 +159,106 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right - Quick Contact Card */}
+          {/* Right - Simple Contact Form */}
           <ScrollReveal direction="right">
             <div className="bg-white dark:bg-gray-900 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 md:p-10 lg:p-12 shadow-sm">
-              <div className="text-center mb-10">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-                  <Phone className="w-10 h-10 text-white" />
-                </div>
+              <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                  Fale Conosco Agora
+                  Solicite um Orçamento
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Escolha uma opção ou clique direto no botão
+                  Preencha o formulário que entraremos em contato
                 </p>
               </div>
 
-              {/* Quick Messages */}
-              <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
-                <p className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 md:mb-4">
-                  Selecione o assunto (opcional):
-                </p>
-                {quickMessages.map((msg, index) => (
-                  <motion.button
-                    key={index}
-                    onClick={() => setSelectedMessage(msg)}
-                    whileHover={{ x: 4 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`w-full text-left px-4 md:px-5 py-3 md:py-4 rounded-xl border transition-all ${
-                      selectedMessage === msg
-                        ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300"
-                        : "bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
-                    }`}
-                  >
-                    <span className="text-sm">{msg}</span>
-                  </motion.button>
-                ))}
-              </div>
+              {/* Simple Form */}
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Nome */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Seu Nome *
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      name="nome"
+                      value={formData.nome}
+                      onChange={handleChange}
+                      required
+                      placeholder="Como podemos te chamar?"
+                      className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                </div>
 
-              {/* Main CTA */}
-              <motion.button
-                onClick={() => handleWhatsAppClick()}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg transition-colors flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/30"
-              >
-                <MessageCircle className="w-6 h-6" />
-                Iniciar Conversa no WhatsApp
-              </motion.button>
+                {/* Empresa */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Empresa
+                  </label>
+                  <div className="relative">
+                    <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      name="empresa"
+                      value={formData.empresa}
+                      onChange={handleChange}
+                      placeholder="Nome da sua empresa (opcional)"
+                      className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    WhatsApp *
+                  </label>
+                  <div className="relative">
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="tel"
+                      name="whatsapp"
+                      value={formData.whatsapp}
+                      onChange={handleChange}
+                      required
+                      placeholder="(00) 00000-0000"
+                      className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                </div>
+
+                {/* Desafio */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Qual é o seu desafio hoje? *
+                  </label>
+                  <textarea
+                    name="desafio"
+                    value={formData.desafio}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    placeholder="Conte um pouco sobre o que você precisa resolver..."
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+                  />
+                </div>
+
+                {/* Submit */}
+                <motion.button
+                  type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg transition-colors flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/30"
+                >
+                  <Send className="w-5 h-5" />
+                  Enviar pelo WhatsApp
+                </motion.button>
+              </form>
 
               <p className="text-center text-sm text-gray-400 mt-6">
-                Atendimento humanizado · Sem robôs
+                Resposta garantida em até 2 horas úteis
               </p>
             </div>
           </ScrollReveal>

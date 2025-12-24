@@ -10,41 +10,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "S-tech | Transformando ideias em soluções digitais",
+  title: "S-Tech Web | Transformando ideias em soluções digitais",
   description:
-    "Agência de tecnologia com 7+ anos de experiência criando sites e apps para governos e igrejas. Atendimento 100% remoto em todo o Brasil.",
+    "Agência de tecnologia com 7+ anos de experiência criando sites e apps para empresas e governos. Atendimento 100% remoto em todo o Brasil.",
   keywords: [
     "desenvolvimento de sites",
     "criação de aplicativos",
-    "sites para igrejas",
-    "sites para governo",
+    "desenvolvimento de software",
+    "sistemas sob medida",
     "desenvolvimento web",
     "agência de tecnologia",
-    "S-tech",
+    "S-Tech Web",
+    "Uberlândia",
   ],
-  authors: [{ name: "S-tech" }],
-  creator: "S-tech",
-  publisher: "S-tech",
+  authors: [{ name: "S-Tech Web" }],
+  creator: "S-Tech Web",
+  publisher: "S-Tech Web",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://s-tech.com.br"),
+  metadataBase: new URL("https://www.s-tech-web.com.br"),
   openGraph: {
-    title: "S-tech | Transformando ideias em soluções digitais",
+    title: "S-Tech Web | Transformando ideias em soluções digitais",
     description:
-      "Agência de tecnologia com 7+ anos de experiência criando sites e apps para governos e igrejas.",
-    url: "https://s-tech.com.br",
-    siteName: "S-tech",
+      "Agência de tecnologia com 7+ anos de experiência criando sites e apps para empresas e governos.",
+    url: "https://www.s-tech-web.com.br",
+    siteName: "S-Tech Web",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "S-tech | Transformando ideias em soluções digitais",
+    title: "S-Tech Web | Transformando ideias em soluções digitais",
     description:
-      "Agência de tecnologia com 7+ anos de experiência criando sites e apps para governos e igrejas.",
+      "Agência de tecnologia com 7+ anos de experiência criando sites e apps para empresas e governos.",
   },
   robots: {
     index: true,

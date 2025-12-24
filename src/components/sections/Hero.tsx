@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { getWhatsAppLink } from "@/lib/utils";
 
 const WHATSAPP_NUMBER = "5511989539505";
-const DEFAULT_MESSAGE = "Olá! Gostaria de um orçamento para meu projeto.";
+const DEFAULT_MESSAGE = "Olá, vi o site da S-Tech Web e gostaria de um orçamento.";
 
 export function Hero() {
   const handleScroll = (href: string) => {
@@ -45,7 +45,7 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                7+ anos transformando ideias em realidade
+                Parceiro de Tecnologia em Uberlândia e Região
               </span>
               <Sparkles className="w-4 h-4 text-amber-500" />
             </div>
@@ -59,11 +59,11 @@ export function Hero() {
             className="text-center mb-8"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.1]">
-              Criamos experiências
+              Transforme sua gestão com
               <br />
               <span className="relative inline-block mt-2">
                 <span className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 bg-clip-text text-transparent">
-                  digitais memoráveis
+                  Softwares Sob Medida
                 </span>
                 <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 rounded-full" />
               </span>
@@ -77,10 +77,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Especialistas em desenvolvimento de sites e aplicativos para{" "}
-            <span className="text-gray-900 dark:text-white font-medium">governos</span> e{" "}
-            <span className="text-gray-900 dark:text-white font-medium">instituições religiosas</span>.
-            Atendimento remoto em todo o Brasil.
+            Desenvolvemos{" "}
+            <span className="text-gray-900 dark:text-white font-medium">sistemas, aplicativos e integrações</span>{" "}
+            que eliminam planilhas, automatizam processos e{" "}
+            <span className="text-gray-900 dark:text-white font-medium">aumentam suas vendas</span>.
+            Atendemos o Triângulo Mineiro e todo o Brasil.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -101,7 +102,7 @@ export function Hero() {
               className="group min-w-[220px] shadow-xl shadow-primary-500/25"
             >
               <span className="flex items-center gap-2">
-                Iniciar Projeto
+                Agendar Consultoria Gratuita
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </Button>
@@ -115,7 +116,7 @@ export function Hero() {
                 <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-colors">
                   <Play className="w-4 h-4 text-gray-600 dark:text-gray-400 group-hover:text-primary-500 transition-colors ml-0.5" />
                 </div>
-                Ver Trabalhos
+                Ver Cases de Sucesso
               </span>
             </Button>
           </motion.div>
@@ -128,10 +129,10 @@ export function Hero() {
           >
             <div className="flex flex-wrap justify-center gap-x-16 md:gap-x-24 gap-y-10">
               {[
-                { value: "7+", label: "Anos no mercado" },
-                { value: "50+", label: "Projetos entregues" },
-                { value: "100%", label: "Remoto" },
-                { value: "24h", label: "Suporte" },
+                { value: "7+", label: "Anos de mercado" },
+                { value: "50+", label: "Empresas atendidas" },
+                { value: "98%", label: "Satisfação" },
+                { value: "24h", label: "Resposta garantida" },
               ].map((stat) => (
                 <div
                   key={stat.label}

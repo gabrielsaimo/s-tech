@@ -10,15 +10,15 @@ const footerLinks = {
   navegacao: [
     { label: "Início", href: "#hero" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Serviços", href: "#servicos" },
-    { label: "Portfólio", href: "#portfolio" },
+    { label: "Soluções", href: "#servicos" },
+    { label: "Cases", href: "#portfolio" },
     { label: "Contato", href: "#contato" },
   ],
-  servicos: [
-    { label: "Sites Institucionais", href: "#servicos" },
-    { label: "Aplicativos Mobile", href: "#servicos" },
-    { label: "E-commerce", href: "#servicos" },
-    { label: "Sistemas Web", href: "#servicos" },
+  solucoes: [
+    { label: "Automação Comercial", href: "#servicos" },
+    { label: "Desenvolvimento White Label", href: "#servicos" },
+    { label: "Aplicativos Corporativos", href: "#servicos" },
+    { label: "Sites e Portais", href: "#servicos" },
   ],
 };
 
@@ -47,20 +47,20 @@ export function Footer() {
         >
           <p className="text-sm font-medium text-primary-500 mb-3">Pronto para começar?</p>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4 tracking-tight">
-            Vamos criar algo incrível juntos
+            Sua empresa merece tecnologia de qualidade
           </h2>
           <p className="text-gray-500 dark:text-gray-400 mb-8 max-w-lg mx-auto">
-            Entre em contato e descubra como podemos transformar suas ideias em realidade digital.
+            Agende uma consultoria gratuita e descubra como podemos resolver seus desafios.
           </p>
           <motion.a
-            href={getWhatsAppLink(WHATSAPP_NUMBER)}
+            href={getWhatsAppLink(WHATSAPP_NUMBER, "Olá, vi o site da S-Tech Web e gostaria de um orçamento.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Iniciar conversa
+            Agendar Consultoria Gratuita
             <ArrowUpRight className="w-4 h-4" />
           </motion.a>
         </motion.div>
@@ -86,16 +86,16 @@ export function Footer() {
               >
                 <img 
                   src="/logo-s.png" 
-                  alt="S-tech Logo" 
+                  alt="S-Tech Web Logo" 
                   className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
                 />
               </motion.div>
               <span className="text-xl font-semibold text-gray-900 dark:text-white tracking-tight transition-colors duration-300 group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                S-tech
+                S-Tech Web
               </span>
             </motion.a>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-              Transformando ideias em soluções digitais há mais de 7 anos.
+              Desenvolvimento de Software e Sites em Uberlândia - MG. Atendemos o Triângulo Mineiro e todo o Brasil.
             </p>
           </div>
 
@@ -122,13 +122,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Serviços */}
+          {/* Soluções */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">
-              Serviços
+              Soluções
             </h3>
             <ul className="space-y-3">
-              {footerLinks.servicos.map((link) => (
+              {footerLinks.solucoes.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
@@ -164,21 +164,33 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contato@s-tech.com.br"
+                  href="mailto:contato@s-tech-web.com.br"
                   className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>contato@s-tech.com.br</span>
+                  <span>contato@s-tech-web.com.br</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
+        {/* SEO Local Section */}
+        <div className="text-center py-8 border-t border-gray-200 dark:border-gray-800 mb-4">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+            <strong className="text-gray-700 dark:text-gray-300">Desenvolvimento de Software e Sites em Uberlândia - MG</strong>
+          </p>
+          <p className="text-xs text-gray-400 dark:text-gray-500">
+            Atendemos empresas do Triângulo Mineiro: Uberlândia, Uberaba, Araguari, Patos de Minas e região.
+            <br />
+            Também atendemos remotamente em todo o Brasil.
+          </p>
+        </div>
+
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            © {currentYear} S-tech. Todos os direitos reservados.
+            © {currentYear} S-Tech Web Soluções em Tecnologia. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <Link 

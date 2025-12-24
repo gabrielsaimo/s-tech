@@ -4,8 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Termos de Uso | S-tech",
-  description: "Termos de Uso da S-tech. Conheça as condições para utilização de nossos serviços de desenvolvimento de sites e aplicativos.",
+  title: "Termos de Uso | S-Tech Web",
+  description: "Termos de Uso da S-Tech Web. Conheça as condições para utilização de nossos serviços de desenvolvimento de sites e aplicativos.",
 };
 
 export default function TermosPage() {
@@ -23,7 +23,7 @@ export default function TermosPage() {
                 <span className="text-white dark:text-gray-900 font-bold text-lg">S</span>
               </div>
               <span className="text-xl font-semibold text-gray-900 dark:text-white tracking-tight">
-                S-tech
+                S-Tech Web
               </span>
             </Link>
             <Link 
@@ -56,20 +56,20 @@ export default function TermosPage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">1. Aceitação dos Termos</h2>
               <p className="mb-4">
-                Ao acessar e utilizar o site da <strong className="text-gray-900 dark:text-white">S-tech</strong> ou 
+                Ao acessar e utilizar o site da <strong className="text-gray-900 dark:text-white">S-Tech Web</strong> ou 
                 contratar nossos serviços de desenvolvimento de sites e aplicativos, você concorda em cumprir 
                 e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, 
                 não deverá utilizar nosso site ou serviços.
               </p>
               <p>
-                A S-tech é uma empresa brasileira especializada em soluções tecnológicas para governos e igrejas, 
+                A S-Tech Web é uma empresa brasileira especializada em soluções tecnológicas para governos e igrejas, 
                 com atendimento 100% remoto em todo o território nacional desde 2018.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">2. Descrição dos Serviços</h2>
-              <p className="mb-4">A S-tech oferece os seguintes serviços:</p>
+              <p className="mb-4">A S-Tech Web oferece os seguintes serviços:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong className="text-gray-900 dark:text-white">Desenvolvimento de Sites:</strong> criação de sites 
@@ -99,14 +99,14 @@ export default function TermosPage() {
                 <li>Não tentar acessar áreas restritas do site sem autorização;</li>
                 <li>Não interferir ou interromper o funcionamento do site;</li>
                 <li>Não transmitir vírus, malware ou qualquer código malicioso;</li>
-                <li>Respeitar os direitos de propriedade intelectual da S-tech e terceiros.</li>
+                <li>Respeitar os direitos de propriedade intelectual da S-Tech Web e terceiros.</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">4. Contratação de Serviços</h2>
               <p className="mb-4">
-                A contratação de serviços da S-tech é formalizada através de proposta comercial e/ou contrato 
+                A contratação de serviços da S-Tech Web é formalizada através de proposta comercial e/ou contrato 
                 específico, que detalharão:
               </p>
               <ul className="list-disc pl-6 space-y-2">
@@ -126,9 +126,9 @@ export default function TermosPage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">5. Propriedade Intelectual</h2>
               <p className="mb-4">
-                <strong className="text-gray-900 dark:text-white">Do site S-tech:</strong> Todo o conteúdo deste site, 
+                <strong className="text-gray-900 dark:text-white">Do site S-Tech Web:</strong> Todo o conteúdo deste site, 
                 incluindo textos, imagens, gráficos, logotipos, ícones, código-fonte e software, é de 
-                propriedade da S-tech ou de seus licenciadores e está protegido pelas leis de propriedade 
+                propriedade da S-Tech Web ou de seus licenciadores e está protegido pelas leis de propriedade 
                 intelectual brasileiras e internacionais.
               </p>
               <p className="mb-4">
@@ -138,27 +138,27 @@ export default function TermosPage() {
                 final desenvolvido.
               </p>
               <p>
-                A S-tech reserva-se o direito de utilizar os projetos desenvolvidos como referência em seu 
+                A S-Tech Web reserva-se o direito de utilizar os projetos desenvolvidos como referência em seu 
                 portfólio, salvo acordo de confidencialidade em contrário.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">6. Responsabilidades do Cliente</h2>
-              <p className="mb-4">Ao contratar serviços da S-tech, o cliente compromete-se a:</p>
+              <p className="mb-4">Ao contratar serviços da S-Tech Web, o cliente compromete-se a:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Fornecer informações, conteúdos e materiais necessários para o projeto nos prazos acordados;</li>
                 <li>Revisar e aprovar entregas dentro dos prazos estabelecidos;</li>
                 <li>Efetuar os pagamentos nas datas acordadas;</li>
                 <li>Garantir que possui direitos sobre os conteúdos fornecidos (textos, imagens, etc.);</li>
-                <li>Manter sigilo sobre informações confidenciais da S-tech;</li>
+                <li>Manter sigilo sobre informações confidenciais da S-Tech Web;</li>
                 <li>Comunicar eventuais problemas ou solicitações de alteração de forma clara e documentada.</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">7. Limitação de Responsabilidade</h2>
-              <p className="mb-4">A S-tech não se responsabiliza por:</p>
+              <p className="mb-4">A S-Tech Web não se responsabiliza por:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Atrasos causados por falta de fornecimento de informações ou materiais pelo cliente;</li>
                 <li>Problemas decorrentes de serviços de terceiros (hospedagem, domínios, integrações, etc.);</li>
@@ -172,7 +172,7 @@ export default function TermosPage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">8. Garantia e Suporte</h2>
               <p className="mb-4">
-                Os projetos desenvolvidos pela S-tech possuem garantia contra defeitos de desenvolvimento, 
+                Os projetos desenvolvidos pela S-Tech Web possuem garantia contra defeitos de desenvolvimento, 
                 conforme especificado em cada contrato. A garantia não cobre:
               </p>
               <ul className="list-disc pl-6 space-y-2">
@@ -189,7 +189,7 @@ export default function TermosPage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">9. Rescisão</h2>
               <p className="mb-4">
-                A S-tech reserva-se o direito de suspender ou encerrar a prestação de serviços em caso de:
+                A S-Tech Web reserva-se o direito de suspender ou encerrar a prestação de serviços em caso de:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Inadimplência do cliente;</li>
@@ -206,7 +206,7 @@ export default function TermosPage() {
             <section>
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">10. Modificações dos Termos</h2>
               <p>
-                A S-tech pode modificar estes Termos de Uso a qualquer momento, publicando a versão 
+                A S-Tech Web pode modificar estes Termos de Uso a qualquer momento, publicando a versão 
                 atualizada em nosso site. Recomendamos que você revise periodicamente esta página. 
                 O uso continuado do site ou serviços após alterações constitui aceitação dos novos termos.
               </p>
@@ -233,7 +233,7 @@ export default function TermosPage() {
                   em pleno vigor.
                 </li>
                 <li>
-                  Estes termos constituem o acordo integral entre você e a S-tech em relação ao uso do 
+                  Estes termos constituem o acordo integral entre você e a S-Tech Web em relação ao uso do 
                   site e substituem quaisquer acordos anteriores.
                 </li>
               </ul>
@@ -246,7 +246,7 @@ export default function TermosPage() {
               </p>
               <div className="p-6 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
                 <p className="mb-2">
-                  <strong className="text-gray-900 dark:text-white">S-tech</strong>
+                  <strong className="text-gray-900 dark:text-white">S-Tech Web</strong>
                 </p>
                 <p className="mb-2">
                   <strong className="text-gray-900 dark:text-white">Responsável:</strong> Saimo (Founder & CEO)
@@ -254,10 +254,10 @@ export default function TermosPage() {
                 <p className="mb-2">
                   <strong className="text-gray-900 dark:text-white">E-mail:</strong>{" "}
                   <a 
-                    href="mailto:gabrielsaimo68@gmail.com" 
+                    href="mailto:contato@s-tech-web.com.br" 
                     className="text-blue-600 dark:text-blue-400 hover:underline"
                   >
-                    gabrielsaimo68@gmail.com
+                    contato@s-tech-web.com.br
                   </a>
                 </p>
                 <p className="mb-2">
@@ -286,7 +286,7 @@ export default function TermosPage() {
         <Container className="py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} S-tech. Todos os direitos reservados.
+              © {new Date().getFullYear()} S-Tech Web. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link 

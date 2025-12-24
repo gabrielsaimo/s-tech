@@ -7,12 +7,12 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { AboutBackground } from "@/components/ui/SectionBackgrounds";
 
 const capabilities = [
-  "Sites Institucionais",
+  "Automação Comercial",
+  "Sistemas sob Medida",
   "Aplicativos Mobile",
-  "Sistemas Web",
-  "E-commerce",
-  "Dashboards",
+  "Sites e Portais",
   "Integrações",
+  "White Label",
 ];
 
 export function About() {
@@ -36,29 +36,28 @@ export function About() {
             
             <ScrollReveal delay={0.1}>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight leading-[1.1]">
-                Construímos o{" "}
-                <span className="text-gray-400 dark:text-gray-500">futuro digital</span>{" "}
-                de organizações que transformam vidas
+                Uma equipe dedicada a{" "}
+                <span className="text-gray-400 dark:text-gray-500">resolver seus desafios</span>
               </h2>
             </ScrollReveal>
             
             <ScrollReveal delay={0.2}>
               <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-                Desde 2018, a S-tech desenvolve soluções digitais sob medida para governos e 
-                instituições religiosas. Nossa missão é democratizar o acesso à tecnologia 
-                de qualidade, com atendimento 100% remoto em todo o Brasil.
+                Desde 2018, nossa equipe desenvolve soluções digitais sob medida para empresas, 
+                governos e instituições. Nossa metodologia garante entregas no prazo, 
+                com qualidade e suporte contínuo mesmo após a implementação.
               </p>
             </ScrollReveal>
 
-            {/* CEO Info */}
+            {/* Company Info */}
             <ScrollReveal delay={0.25}>
               <div className="flex items-center gap-4 mb-10 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold text-lg">
                   S
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">Saimo</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Fundador & CEO</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">S-Tech Web Soluções</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Uberlândia - MG | Atendimento em todo Brasil</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -87,7 +86,7 @@ export function About() {
                 className="inline-flex items-center gap-3 text-gray-900 dark:text-white font-semibold group"
                 whileHover={{ x: 4 }}
               >
-                Conheça nossos serviços
+                Conheça nossas soluções
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
             </ScrollReveal>
@@ -99,8 +98,8 @@ export function About() {
               {[
                 { value: "7+", label: "Anos de experiência", sublabel: "Desde 2018" },
                 { value: "50+", label: "Projetos entregues", sublabel: "E contando" },
-                { value: "30+", label: "Clientes satisfeitos", sublabel: "Governos e igrejas" },
-                { value: "100%", label: "Atendimento remoto", sublabel: "Todo Brasil" },
+                { value: "30+", label: "Clientes satisfeitos", sublabel: "Empresas e governos" },
+                { value: "100%", label: "Atendimento remoto", sublabel: "Triângulo Mineiro e Brasil" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

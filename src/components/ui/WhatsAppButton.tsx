@@ -6,7 +6,7 @@ import { getWhatsAppLink } from "@/lib/utils";
 import { useState, useEffect } from "react";
 
 const WHATSAPP_NUMBER = "5511989539505";
-const DEFAULT_MESSAGE = "Olá! Gostaria de saber mais sobre os serviços da S-tech.";
+const DEFAULT_MESSAGE = "Olá, vi o site da S-Tech Web e gostaria de um orçamento.";
 
 export function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -49,10 +49,10 @@ export function WhatsAppButton() {
               <X className="w-4 h-4 text-gray-400" />
             </button>
             <p className="text-base font-semibold text-gray-900 dark:text-white mb-2 pr-6">
-              Precisa de ajuda?
+              Fale com um especialista
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-              Estamos online! Clique para conversar pelo WhatsApp.
+              Tire suas dúvidas e peça um orçamento sem compromisso.
             </p>
           </motion.div>
         )}

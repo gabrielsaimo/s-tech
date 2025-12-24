@@ -1,108 +1,130 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, QrCode } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, QrCode, Quote, Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PortfolioBackground } from "@/components/ui/SectionBackgrounds";
 
+// Depoimentos de parceiros
+const testimonials = [
+  {
+    name: "Carlos Silva",
+    role: "Diretor de TI",
+    company: "Prefeitura de Uberlândia",
+    avatar: "CS",
+    testimonial: "A S-Tech Web entregou nosso portal LGPD em tempo recorde. A equipe entendeu nossas necessidades e criou uma solução que realmente funciona para os cidadãos.",
+    rating: 5,
+  },
+  {
+    name: "Ana Paula Santos",
+    role: "Coordenadora",
+    company: "Igreja Videira Uberlândia",
+    avatar: "AP",
+    testimonial: "Nosso site ficou moderno e acessível. O suporte é excelente, sempre respondem rápido quando precisamos de alguma alteração.",
+    rating: 5,
+  },
+  {
+    name: "Roberto Mendes",
+    role: "Gerente de Operações",
+    company: "NacionalNet Educação",
+    avatar: "RM",
+    testimonial: "O sistema de rematrícula reduziu nosso trabalho em 80%. Antes gastávamos semanas, agora é tudo automático.",
+    rating: 5,
+  },
+];
+
 const projects = [
   {
-    id: "igreja-videira",
-    title: "Igreja Videira Uberlândia",
-    category: "Website Institucional",
-    description:
-      "Site institucional moderno para a Igreja Videira de Uberlândia. Design elegante com acessibilidade em Libras e integração com redes sociais.",
-    results: [
-      { label: "Acessos mensais", value: "5k+" },
-      { label: "Satisfação", value: "100%" },
-    ],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    color: "from-violet-500 to-purple-600",
-    featured: true,
-    url: "https://videira-uberlandia.com.br/",
-    icon: Church,
-  },
-  {
-    id: "rematricula-nacionalnet",
-    title: "Rematrícula NacionalNet",
-    category: "Sistema Educacional",
-    description:
-      "Plataforma completa de rematrícula online para instituições de ensino. Sistema automatizado que facilita o processo de renovação de matrículas com interface intuitiva para pais e responsáveis.",
-    results: [
-      { label: "Escolas", value: "50+" },
-      { label: "Matrículas/ano", value: "10k+" },
-      { label: "Tempo economizado", value: "80%" },
-    ],
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-    color: "from-blue-600 to-indigo-700",
-    featured: true,
-    url: "https://rematricula.nacionalnet.com.br",
-    icon: GraduationCap,
-  },
-  {
-    id: "gerencia-syskeeper",
-    title: "SysKeeper Gerência",
-    category: "Sistema de Gestão",
-    description:
-      "Sistema completo de gerenciamento empresarial. Dashboard administrativo com controle de usuários, relatórios, métricas de desempenho e gestão de recursos em tempo real.",
-    results: [
-      { label: "Empresas", value: "100+" },
-      { label: "Usuários ativos", value: "2k+" },
-      { label: "Uptime", value: "99.9%" },
-    ],
-    technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
-    color: "from-emerald-500 to-teal-600",
-    featured: false,
-    url: "https://gerencia.syskeeper.com.br",
-    icon: Building2,
-  },
-  {
-    id: "sistema-cropland",
-    title: "Cropland Sistema",
-    category: "AgroTech",
-    description:
-      "Sistema de gestão agrícola completo para produtores rurais. Controle de safras, monitoramento de culturas, gestão financeira e relatórios de produtividade para o agronegócio.",
-    results: [
-      { label: "Fazendas", value: "200+" },
-      { label: "Hectares gerenciados", value: "50k+" },
-      { label: "Produtividade", value: "+25%" },
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "IoT"],
-    color: "from-green-500 to-lime-600",
-    featured: true,
-    url: "https://sistema.cropland.com.br",
-    icon: Leaf,
-  },
-  {
     id: "lgpd-uberlandia",
-    title: "LGPD Uberlândia",
+    title: "Portal LGPD Uberlândia",
     category: "Portal Governamental",
-    description:
-      "Portal de conformidade LGPD para a Prefeitura de Uberlândia. Sistema de gestão de dados pessoais, solicitações de titulares e compliance com a Lei Geral de Proteção de Dados.",
+    challenge: "A Prefeitura precisava atender à Lei Geral de Proteção de Dados, mas não tinha um sistema para receber e gerenciar solicitações dos cidadãos sobre seus dados pessoais.",
+    solution: "Desenvolvemos um portal completo onde cidadãos podem fazer solicitações LGPD e os servidores gerenciam tudo em um painel administrativo.",
     results: [
       { label: "Solicitações/mês", value: "500+" },
-      { label: "Tempo resposta", value: "-60%" },
+      { label: "Tempo de resposta", value: "-60%" },
       { label: "Conformidade", value: "100%" },
     ],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
     color: "from-amber-500 to-orange-600",
     featured: true,
     url: "https://lgpdprodaub.uberlandia.mg.gov.br",
     icon: Shield,
   },
   {
+    id: "rematricula-nacionalnet",
+    title: "Sistema de Rematrícula",
+    category: "Sistema Educacional",
+    challenge: "Escolas gastavam semanas para renovar matrículas manualmente, com filas de pais e papelada para organizar.",
+    solution: "Criamos uma plataforma online onde pais renovam a matrícula pelo celular em minutos, com documentação digital e integração com o sistema da escola.",
+    results: [
+      { label: "Escolas atendidas", value: "50+" },
+      { label: "Matrículas/ano", value: "10k+" },
+      { label: "Tempo economizado", value: "80%" },
+    ],
+    color: "from-blue-600 to-indigo-700",
+    featured: true,
+    url: "https://rematricula.nacionalnet.com.br",
+    icon: GraduationCap,
+  },
+  {
+    id: "sistema-cropland",
+    title: "Gestão Agrícola Cropland",
+    category: "AgroTech",
+    challenge: "Produtores rurais perdiam o controle de safras, custos e produtividade por falta de um sistema adequado ao campo.",
+    solution: "Desenvolvemos um sistema que funciona mesmo offline, com controle de safras, gestão financeira e relatórios que ajudam na tomada de decisão.",
+    results: [
+      { label: "Fazendas", value: "200+" },
+      { label: "Hectares gerenciados", value: "50k+" },
+      { label: "Aumento produtividade", value: "+25%" },
+    ],
+    color: "from-green-500 to-lime-600",
+    featured: true,
+    url: "https://sistema.cropland.com.br",
+    icon: Leaf,
+  },
+  {
+    id: "igreja-videira",
+    title: "Igreja Videira Uberlândia",
+    category: "Website Institucional",
+    challenge: "A igreja precisava de um site moderno que fosse acessível para pessoas surdas e fácil de atualizar pela equipe.",
+    solution: "Criamos um site com acessibilidade em Libras, design elegante e um painel simples para a equipe publicar conteúdos.",
+    results: [
+      { label: "Acessos mensais", value: "5k+" },
+      { label: "Satisfação", value: "100%" },
+    ],
+    color: "from-violet-500 to-purple-600",
+    featured: true,
+    url: "https://videira-uberlandia.com.br/",
+    icon: Church,
+  },
+  {
+    id: "gerencia-syskeeper",
+    title: "SysKeeper Gerência",
+    category: "Sistema de Gestão",
+    challenge: "Empresas precisavam de um sistema centralizado para gerenciar operações, usuários e métricas.",
+    solution: "Dashboard administrativo completo com controle de usuários, relatórios e gestão de recursos em tempo real.",
+    results: [
+      { label: "Empresas", value: "100+" },
+      { label: "Usuários ativos", value: "2k+" },
+      { label: "Uptime", value: "99.9%" },
+    ],
+    color: "from-emerald-500 to-teal-600",
+    featured: false,
+    url: "https://gerencia.syskeeper.com.br",
+    icon: Building2,
+  },
+  {
     id: "central-ambulancia",
     title: "Central de Ambulâncias",
     category: "Portal Governamental",
-    description:
-      "Sistema de gestão e solicitação de ambulâncias para a Prefeitura de Uberlândia. Plataforma que otimiza o atendimento de emergências e gerenciamento de frotas.",
+    challenge: "A gestão de ambulâncias era feita por telefone, causando atrasos no atendimento de emergências.",
+    solution: "Sistema de solicitação e gestão de ambulâncias com rastreamento em tempo real e otimização de rotas.",
     results: [
       { label: "Atendimentos/mês", value: "1k+" },
       { label: "Tempo resposta", value: "-40%" },
       { label: "Cobertura", value: "100%" },
     ],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
     color: "from-red-500 to-rose-600",
     featured: false,
     url: "https://centralambulancia.uberlandia.mg.gov.br/principal",
@@ -112,14 +134,13 @@ const projects = [
     id: "segunda-via",
     title: "Segunda Via de Documentos",
     category: "Portal Governamental",
-    description:
-      "Portal de emissão de segunda via de documentos para cidadãos de Uberlândia. Sistema simplificado para consulta e solicitação de documentos municipais.",
+    challenge: "Cidadãos precisavam ir presencialmente para solicitar segunda via de documentos municipais.",
+    solution: "Portal online 24/7 para consulta e solicitação de documentos com acompanhamento do pedido.",
     results: [
       { label: "Consultas/mês", value: "5k+" },
       { label: "Satisfação", value: "95%" },
       { label: "Disponibilidade", value: "24/7" },
     ],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
     color: "from-sky-500 to-blue-600",
     featured: false,
     url: "https://segundavia.uberlandia.mg.gov.br/consulta",
@@ -129,66 +150,17 @@ const projects = [
     id: "pix-web",
     title: "PIX Web Uberlândia",
     category: "Portal Governamental",
-    description:
-      "Plataforma de pagamentos via PIX para serviços municipais de Uberlândia. Sistema seguro e integrado para facilitar pagamentos dos cidadãos.",
+    challenge: "Pagamentos de serviços municipais eram feitos apenas presencialmente ou por boleto.",
+    solution: "Plataforma de pagamentos via PIX integrada aos serviços municipais com confirmação instantânea.",
     results: [
       { label: "Transações/mês", value: "10k+" },
       { label: "Valor processado", value: "R$2M+" },
       { label: "Uptime", value: "99.9%" },
     ],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "API PIX"],
     color: "from-teal-500 to-emerald-600",
     featured: false,
     url: "https://pix-web.uberlandia.mg.gov.br",
     icon: QrCode,
-  },
-  {
-    id: "menu-digital",
-    title: "Menu Digital",
-    category: "SaaS / Sistema Web",
-    description:
-      "Plataforma completa de cardápio digital para restaurantes com sistema de delivery e comandas digitais.",
-    results: [
-      { label: "Clientes ativos", value: "30+" },
-      { label: "Pedidos/mês", value: "2k+" },
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    color: "from-orange-500 to-red-600",
-    featured: false,
-    url: "https://menu-digital.vercel.app/",
-    icon: Utensils,
-  },
-  {
-    id: "sapalavras",
-    title: "SaPalavras",
-    category: "Jogo Web",
-    description:
-      "Jogo multiplayer de palavras interativo com múltiplas categorias e mecânica de turnos.",
-    results: [
-      { label: "Jogadores", value: "500+" },
-      { label: "Partidas/mês", value: "1k+" },
-    ],
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
-    color: "from-pink-500 to-rose-600",
-    featured: false,
-    url: "https://sapalavras.vercel.app/",
-    icon: Gamepad2,
-  },
-  {
-    id: "ranking-pro",
-    title: "Ranking Pro",
-    category: "Ferramenta Web",
-    description:
-      "Sistema de criação de rankings interativos com drag and drop e torneios chaveados.",
-    results: [
-      { label: "Rankings criados", value: "200+" },
-      { label: "Usuários", value: "300+" },
-    ],
-    technologies: ["React", "TypeScript", "DnD Kit"],
-    color: "from-cyan-500 to-blue-600",
-    featured: false,
-    url: "https://rankinggs.vercel.app/",
-    icon: Trophy,
   },
 ];
 
@@ -246,6 +218,38 @@ function MiniSitePreview({ url, title }: { url: string; title: string }) {
   );
 }
 
+// Componente de Depoimento
+function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
+  return (
+    <motion.div
+      whileHover={{ y: -4 }}
+      className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all"
+    >
+      <div className="flex items-center gap-1 mb-4">
+        {[...Array(testimonial.rating)].map((_, i) => (
+          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+        ))}
+      </div>
+      
+      <Quote className="w-8 h-8 text-primary-200 dark:text-primary-800 mb-4" />
+      
+      <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+        "{testimonial.testimonial}"
+      </p>
+      
+      <div className="flex items-center gap-4">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold">
+          {testimonial.avatar}
+        </div>
+        <div>
+          <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role} · {testimonial.company}</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export function Portfolio() {
   return (
     <section
@@ -260,27 +264,27 @@ export function Portfolio() {
         <div className="max-w-3xl mb-20">
           <ScrollReveal>
             <p className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-6">
-              Portfólio
+              Cases de Sucesso
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight leading-[1.1]">
-              Projetos que{" "}
-              <span className="text-gray-400 dark:text-gray-500">fazem a diferença</span>
+              Resultados que{" "}
+              <span className="text-gray-400 dark:text-gray-500">falam por si</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
-              Conheça alguns dos projetos que desenvolvemos e o impacto 
-              que geramos para nossos clientes.
+              Veja como ajudamos empresas e governos a resolver desafios reais 
+              com soluções sob medida.
             </p>
           </ScrollReveal>
         </div>
 
-        {/* Featured Projects - Large Cards with Screenshots */}
-        <div className="space-y-10 mb-16">
+        {/* Featured Projects - Case Studies */}
+        <div className="space-y-10 mb-20">
           {projects.filter((p) => p.featured).map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 0.1}>
               <motion.div
@@ -303,15 +307,31 @@ export function Portfolio() {
                     </div>
                   </div>
 
-                  {/* Content Side */}
+                  {/* Content Side - Case Study Format */}
                   <div className="p-8 lg:p-12">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
-                      {project.description}
-                    </p>
+                    {/* Challenge */}
+                    <div className="mb-6">
+                      <p className="text-sm font-semibold text-red-500 dark:text-red-400 uppercase tracking-wide mb-2">
+                        O Desafio
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
+                        {project.challenge}
+                      </p>
+                    </div>
+
+                    {/* Solution */}
+                    <div className="mb-8">
+                      <p className="text-sm font-semibold text-emerald-500 dark:text-emerald-400 uppercase tracking-wide mb-2">
+                        Nossa Solução
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
+                        {project.solution}
+                      </p>
+                    </div>
 
                     {/* Results */}
                     <div className="grid grid-cols-3 gap-4 mb-8 pb-8 border-b border-gray-200 dark:border-gray-800">
@@ -327,18 +347,6 @@ export function Portfolio() {
                       ))}
                     </div>
 
-                    {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
                     {/* Visit button */}
                     <motion.a
                       href={project.url}
@@ -348,7 +356,7 @@ export function Portfolio() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      Ver Projeto
+                      Ver Projeto Funcionando
                       <ExternalLink className="w-4 h-4" />
                     </motion.a>
                   </div>
@@ -356,6 +364,28 @@ export function Portfolio() {
               </motion.div>
             </ScrollReveal>
           ))}
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="mb-20">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <p className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-4">
+                O que dizem nossos parceiros
+              </p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                Depoimentos de quem confia no nosso trabalho
+              </h3>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <ScrollReveal key={testimonial.name} delay={index * 0.1}>
+                <TestimonialCard testimonial={testimonial} />
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
 
         {/* Other Projects Grid - Smaller Cards */}
@@ -395,7 +425,7 @@ export function Portfolio() {
                   </h4>
 
                   <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-4">
-                    {project.description}
+                    {project.challenge}
                   </p>
 
                   <div className="flex items-center gap-2 text-sm font-medium text-primary-600 dark:text-primary-400">
