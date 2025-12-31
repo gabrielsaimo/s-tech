@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, QrCode, Quote, Star } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, QrCode, Quote, Star, Car } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PortfolioBackground } from "@/components/ui/SectionBackgrounds";
@@ -161,6 +161,22 @@ const projects = [
     featured: false,
     url: "https://pix-web.uberlandia.mg.gov.br",
     icon: QrCode,
+  },
+  {
+    id: "easy-cnh",
+    title: "Easy CNH",
+    category: "Plataforma Educacional",
+    challenge: "Alunos tinham dificuldade em encontrar instrutores de direção confiáveis e agendar aulas de forma prática.",
+    solution: "Plataforma que conecta alunos a instrutores certificados, com agendamento online, avaliações e acompanhamento de progresso em cada manobra.",
+    results: [
+      { label: "Instrutores", value: "100+" },
+      { label: "Avaliações 5★", value: "500+" },
+      { label: "Satisfação", value: "98%" },
+    ],
+    color: "from-cyan-500 to-blue-600",
+    featured: false,
+    url: "https://www.easy-cnh.com",
+    icon: Car,
   },
 ];
 
