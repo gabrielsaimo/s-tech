@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, QrCode, Quote, Star, Car } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Building2, GraduationCap, Leaf, Shield, Church, Utensils, Gamepad2, Trophy, Ambulance, FileText, Quote, Star, Car } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { PortfolioBackground } from "@/components/ui/SectionBackgrounds";
@@ -145,22 +145,6 @@ const projects = [
     featured: false,
     url: "https://segundavia.uberlandia.mg.gov.br/consulta",
     icon: FileText,
-  },
-  {
-    id: "pix-web",
-    title: "PIX Web Uberlândia",
-    category: "Portal Governamental",
-    challenge: "Pagamentos de serviços municipais eram feitos apenas presencialmente ou por boleto.",
-    solution: "Plataforma de pagamentos via PIX integrada aos serviços municipais com confirmação instantânea.",
-    results: [
-      { label: "Transações/mês", value: "10k+" },
-      { label: "Valor processado", value: "R$2M+" },
-      { label: "Uptime", value: "99.9%" },
-    ],
-    color: "from-teal-500 to-emerald-600",
-    featured: false,
-    url: "https://pix-web.uberlandia.mg.gov.br",
-    icon: QrCode,
   },
   {
     id: "easy-cnh",
@@ -404,51 +388,38 @@ export function Portfolio() {
           </div>
         </div>
 
-        {/* Other Projects Grid - Smaller Cards */}
+        {/* Other Projects - Lista */}
         <ScrollReveal>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
             Outros Projetos
           </h3>
         </ScrollReveal>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="space-y-3">
           {projects.filter((p) => !p.featured).map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 0.05}>
               <motion.a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ y: -4 }}
+                whileHover={{ x: 4 }}
                 transition={{ duration: 0.2 }}
-                className="group block bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300"
+                className="group flex items-center justify-between p-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all duration-300"
               >
-                {/* Screenshot */}
-                <div className={`relative h-40 bg-gradient-to-br ${project.color} overflow-hidden`}>
-                  <MiniSitePreview url={project.url} title={project.title} />
-                </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <project.icon className="w-4 h-4 text-gray-400" />
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex items-center gap-4">
+                  <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+                    <project.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                      {project.title}
+                    </h4>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
                       {project.category}
                     </span>
                   </div>
-                  
-                  <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                    {project.title}
-                  </h4>
-
-                  <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-4">
-                    {project.challenge}
-                  </p>
-
-                  <div className="flex items-center gap-2 text-sm font-medium text-primary-600 dark:text-primary-400">
-                    Ver projeto
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </div>
                 </div>
+                <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-primary-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </motion.a>
             </ScrollReveal>
           ))}
